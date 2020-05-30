@@ -1,0 +1,97 @@
+/* ipad pro */
+@media only screen and (max-width: 1024px){
+    .carousel-item{
+        height: 45vh;
+    }
+    .divider{
+        height: 10vh;
+    }
+}
+
+/* iPad */
+
+@media only screen and (max-width: 1023px){
+    .navbar-collapse{
+        background: rgba(73, 73, 73,0.9);
+        position: absolute; 
+        top: 100%;
+        left:0;
+        width: 100%;
+        z-index: 10;
+        color: #fff;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .navbar-nav .nav-item:not(:first-child) {
+        margin: 1.3rem 0;
+    }
+    .navbar-nav .nav-link{
+        color: #fff;
+    }
+
+    .navbar-nav .nav-link i{
+        color: #7f94ac;
+    }
+
+    .navbar-toggler{
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    .navbar-toggler:focus{
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .carousel-item .caption{
+        display:none;
+    }
+    .auto-slider-carousel .carousel-cell {
+        width: 40%;
+        margin-right: 1rem;
+    }
+
+    .flickity-viewport{
+        height: 216px;
+    }
+
+    .carousel-cell .bottom-badge{
+        bottom:0;
+        transform: translateY(0);
+    }
+    .carousel-cell .price-badge{
+        transform: translateX(0);
+    }
+    .carousel-cell .bottom-badge div {
+        font-size: 0.6rem;
+    }
+
+    .auto-slider-carousel .flickity-button.previous{
+        left: 75% !important;
+    }
+
+}
+
+/* small phones */
+@media only screen and (max-width: 420px){
+    .divider{
+        height: 5vh;
+    }
+    .carousel-item{
+        height: 30vh;
+    }
+    .footer-content ul p{
+        font-size: 1rem;
+    }
+    .carousel-cell .price-badge span{
+        height: 15px;
+        line-height: 16px;
+    }
+    .carousel-cell .price-badge span::before{
+        display: none;
+    }
+    .bottom-badge div:first-child{
+        padding:0 !important;
+    }
+    .view{
+        display:none;
+    }
+}

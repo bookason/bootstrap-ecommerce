@@ -1,0 +1,363 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.divider{
+    height: 20vh;
+}
+
+.categories h4, .new-arrival h4{
+    color: #0f99f3;
+}
+
+
+
+/* header section */
+
+/* navbar */
+.navbar.fixed-top{
+    background: rgba(255, 255, 255,0.9);
+    z-index: 2;
+}
+nav a {
+    color: #66788d;
+}
+nav a:hover{
+    color: #7f94ac
+}
+.nav-item .cart-icon{
+    position: relative;
+}
+.nav-item .cart-icon::before{
+    content: "";
+    background: #f3f5f9;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -3;
+    top: calc(50% - 1.2rem);
+    left: calc(50% - 1.1rem)
+}
+.nav-item .badge{
+    position: absolute; 
+    top: -0.5rem;
+    left: 95%;   
+    color: #ff7568;
+    font-size: 85%;
+}
+
+.nav-item .fa-user{
+    color: #ff7568;
+    font-size: 85%;
+}
+/* end of navbar */
+
+
+/* carousel/slider */
+.carousel-item{
+    height: 97vh;
+    position: relative;
+}
+
+.carousel-item img{
+    position: relative;
+    top: -6rem;
+}
+
+.carousel-item .caption{
+    position: absolute;
+    width: 40%;
+    top: 15%;
+    left: 10%;
+    
+}
+
+.carousel-item .caption h2{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #7f94ac;
+    text-transform: capitalize;
+}
+
+.carousel-item:last-child .caption{
+    left: 65%;
+    color: #f3f5f9;
+}
+
+.caption button{
+    background: #ff7568;
+    color: #f3f5f9;
+    text-transform: capitalize;
+    border-radius: 0;
+    margin-top: 6rem;
+}
+
+/* end of carousel/slider */
+
+/* end of header section */
+
+
+/* Categories section */
+
+/* nav pills */
+.tab-content>.tab-pane{
+    display: block;
+    height:0;
+    overflow: hidden;
+}
+.tab-content>.active{
+    height: auto;
+}
+
+.nav-pills::before{
+    position: absolute;
+    content: "";
+    background: #ff7568;
+    opacity: 0.3;
+    top:100%;
+    left:0;
+    width: 100%;
+    height: 0.6rem;
+}
+
+.nav-pills .nav-item{
+    margin-right: 3rem;
+}
+
+.nav-pills .nav-link{
+    padding: 0.5rem 0;
+    transition: all 0.5s;
+    color: #0f99f3;
+}
+
+.nav-pills .nav-link.active{
+    background: transparent;
+    color: #ff7568;
+    position: relative;
+}
+
+.nav-pills .nav-link.active::after{
+    position: absolute;
+    content: "";
+    background-color: rgba(255, 117, 104,0.8);
+    top:100%;
+    top: 100%;
+    left:0;
+    width: 100%;
+    height: 0.6rem;
+    
+}
+/* end of nav pills */
+
+/* Flickity */
+
+.carousel-cell{
+    width: 100%;
+    padding: 0 1rem;
+}
+.carousel-cell img{
+    max-width: 100%;
+    transition: all 0.5s;
+}
+
+.carousel-cell .carousel-content{
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-cell .carousel-content:hover .price-badge{
+    transform: translateX(0);
+}
+
+
+
+.carousel-cell .carousel-content:hover img{
+    transform: scale(1.02);
+}
+
+.carousel-cell .price-badge{
+    position: absolute;
+    left:0;
+    top: 20%;
+    transform: translateX(-6rem);
+    transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.carousel-cell .price-badge span{
+    position: relative;
+    background: #ff7568;
+    height: 28px;
+    display: block;
+    line-height: 30px;
+    padding: 0 0.5rem;
+    color: #fff;
+}
+
+.carousel-cell .price-badge span::before{
+    position: absolute;
+    content: "";
+    border-color: #ff7568 transparent #ff7568 #ff7568;
+    border-width: 14px 8px;
+    border-style: solid;
+    z-index: 3;
+    width: 15px;
+    right: -15px;
+    color: #ff7568;
+    height: 100%;
+    top:0;
+}
+
+.carousel-cell .bottom-badge{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    margin-left: 0;
+    transform: translateY(6rem);
+    transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    cursor: pointer;
+}
+
+.carousel-cell .carousel-content:hover .bottom-badge{
+    transform: translateY(0);
+}
+
+.carousel-cell .bottom-badge div:first-child{
+    background: #0f99f3;
+    color: #fff;
+}
+.carousel-cell .bottom-badge div:last-child{
+    background: #ff7568;
+    color: #fff;
+}
+
+
+/* end of flickity */
+
+/* product modal */
+.product-modal{
+    position: fixed;
+    top:0;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.product-content{
+    background: #fff;
+    width: 70%;
+    height: 60%;
+    padding: 5rem;
+    margin: 10% auto;
+    position: relative;
+}
+.modal-close{
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    cursor: pointer;
+}
+
+.product-modal.show{
+    display: block;
+}
+/* end of product modal */
+
+/* end of categories section */
+
+/* new arrival section */
+.auto-slider-carousel .carousel-cell {
+    width: 30%;
+    margin-right: 1rem;
+}
+.auto-slider-carousel img{
+    width: 100%;
+}
+.auto-slider-carousel .flickity-button{
+    top: -2rem !important;
+}
+.auto-slider-carousel .flickity-button.previous{
+    left: 85% !important;
+}
+.auto-slider-carousel .flickity-prev-next-button{
+    width: 30px !important;
+    height:30px !important;
+}
+/* end of new arrival section */
+
+/* footer */
+footer{
+    background: #1d2536;
+    color: #f3f5f9;
+}
+
+.form-control, .input-group-text{
+    border-radius: 0;
+    background: transparent;
+    color: #f3f5f9;
+    transition: all 0.4s;
+}
+.input-group-text:hover{
+    background-color: #0f99f3;
+    border-color: #0f99f3;
+    cursor: pointer;
+}
+.form-control{
+    background-color: transparent;
+    border-right: none;
+}
+.form-control:focus{
+    background-color:transparent;
+    box-shadow: none;
+    border-color: #0f99f3;
+    outline: 0;
+    color: #f3f5f9;
+}
+.contact{
+    max-width: 20rem;
+}
+.footer-content ul li:not(:first-child){
+    margin: 2rem 0;
+}
+.footer-content a{
+    color: #f3f5f9;
+    text-transform: capitalize;
+}
+.footer-content h4{
+    margin-bottom: 2rem;
+}
+.social-media i{
+    color: rgb(15, 153, 243);
+    cursor: pointer;
+}
+
+.footer-extra{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem 3rem;
+    background:#303f5e;
+}
+
+.footer-extra div{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 1rem;
+    background: #364668;
+}
+.footer-extra div span p:last-child{
+    margin-bottom:0;
+    font-size: 0.7rem;
+}
+.footer-extra div span p{
+    text-transform: capitalize;
+}
+/* end of footer */

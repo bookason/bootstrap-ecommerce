@@ -1,0 +1,41 @@
+.custom__item-inner:hover img.custom__image{
+    transform: scale(1.05);
+  }
+  
+  img.custom__image{
+  transition: all 0.2s ease-in-out;
+  }
+  
+  .custom-content{
+  position: relative;
+  }
+  
+  .custom__item--1589381662084, .custom__item--1589402639584{
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  right:0;
+  bottom:0;
+  user-select: none;
+  height: fit-content;
+  width: fit-content;
+  transform: translateY(-50%);
+  }
+  
+  .custom__item--1589402639584{
+  left:55%;
+  }
+  .product_btn{
+      background: #ddd;
+      color: #000;
+      text-transform: lowercase;
+      border-radius: 0.3rem;
+  }
+
+  .medium-up--text-left h4::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: -1rem;
+      background-color: rgba(0, 37, 84,0.1);
+  }
